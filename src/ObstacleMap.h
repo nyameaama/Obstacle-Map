@@ -5,6 +5,8 @@
 #include<stddef.h>
 #include<string.h>
 
+#include"2D/Map2D.h"
+
 #define INIT (uint8_t) 1
 
 class OBSTACLEMAP {
