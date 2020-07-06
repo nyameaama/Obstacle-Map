@@ -14,6 +14,8 @@ uint8_t OBSTACLEMAP::MAP3D(TYPEDEF TOKEN){
 }
 template<typename TYPEDEF>
 void OBSTACLEMAP::ADD_TO_MAP_2D(uint8_t MAP_ID,TYPEDEF bearing, TYPEDEF value){
+    MAP2D *add = new MAP2D;
+    
 
 }
 template<typename TYPEDEF>
