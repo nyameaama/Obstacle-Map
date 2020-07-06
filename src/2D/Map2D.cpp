@@ -23,8 +23,8 @@ uint8_t MAP2D::INIT_MAP(T TOKEN){
 
 template <typename T>
 uint8_t MAP2D::UPDATE_2D(T ID,T bearing, T value){
-    if(searchTable(bearing) != (-1)){
-        ADD_ON_TO_TABLE(ID,searchTable(bearing),value);
+    if(searchTable(ID,bearing) != (-1)){
+        ADD_ON_TO_TABLE(ID,searchTable(ID,bearing),value);
     }else{
 
     }
