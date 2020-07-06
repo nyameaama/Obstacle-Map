@@ -1,9 +1,11 @@
 #ifndef ADD_UTIL
 #define ADD_UTIL
 
+#include <stdint.h>
+
 class UTILITY {
     public:
-        char* GENERATE_ID();
+        uint8_t GENERATE_ID();
 
 
 };
