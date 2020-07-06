@@ -3,7 +3,8 @@
 template<typename TYPEDEF>
  //Param = INIT token or custom specifier ID 
 uint8_t OBSTACLEMAP::MAP2D(TYPEDEF TOKEN){
-
+    if(TOKEN == INIT)
+        
 }
 
 template<typename TYPEDEF>
