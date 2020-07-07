@@ -4,11 +4,6 @@
 ### How to use
 * In this sketch, data is read from ultrasonic sensor into a Map2D object
 
-void setup(){
-    Serial.begin(9600);
-
-}
-void loop(){
     //Map2D object
     OBSTACLE_MAP *newObj = new OBSTACLE_MAP;
 
@@ -20,4 +15,3 @@ void loop(){
 
     //Call Map function
     newObj -> ADD_TO_MAP(MAP2D(INIT),angle,new_reading);
-}
