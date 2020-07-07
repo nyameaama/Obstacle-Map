@@ -14,4 +14,4 @@
                 double angle = GET_ANGLE();
 
                 //Call Map function
-                newObj -> ADD_TO_MAP(MAP2D(INIT),angle,new_reading);
+                newObj -> ADD_TO_MAP(newObj -> MAP2D(INIT),angle,new_reading);

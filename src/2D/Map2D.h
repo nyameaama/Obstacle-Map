@@ -3,11 +3,12 @@
 
 #include<stddef.h>
 #include<stdint.h>
+#include"MapStructures.h"
 #include"../utility/utility.h"
 
 #define INIT (uint8_t) 1
 
-class MAP2D {
+class MAP2D_ {
     private:
         template <typename T>
         uint8_t ADD_ON_TO_TABLE(T ID,uint8_t index,T value);
