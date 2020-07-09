@@ -38,7 +38,7 @@ uint8_t MAP2D_::UPDATE_2D(uint8_t  ID,uint8_t bearing, uint8_t  value){
     }else{
 
     }
-    DEBUG_PRINT();
+    //DEBUG_PRINT();
 }
 
 //template <typename T>
