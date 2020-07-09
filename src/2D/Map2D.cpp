@@ -20,7 +20,7 @@ uint8_t MAP2D_::UPDATE_2D(T ID,T bearing, T value){
     if(searchTable(ID,bearing) != (-1)){
         ADD_ON_TO_TABLE(ID,searchTable(ID,bearing),value);
     }else{
-
+ double a = 1;
     }
 }
 
