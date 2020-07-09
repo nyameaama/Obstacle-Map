@@ -11,23 +11,23 @@
 
 class OBSTACLEMAP {
     public:
-        template<typename TYPEDEF>
+        //template<typename uint8_t>
         //Param = INIT token or custom specifier ID 
-        uint8_t MAP2D(TYPEDEF TOKEN);
+        uint8_t MAP2D(uint8_t TOKEN);
 
-        template<typename TYPEDEF>
+        //template<typename uint8_t>
         //Param = INIT token or custom specifier ID 
-        uint8_t MAP3D(TYPEDEF TOKEN);
+        uint8_t MAP3D(uint8_t TOKEN);
 
-        template<typename TYPEDEF>
-        void ADD_TO_MAP_2D(uint8_t MAP_ID,TYPEDEF bearing, TYPEDEF value);
+        //template<typename uint8_t>
+        void ADD_TO_MAP_2D(uint8_t MAP_ID,uint8_t bearing, uint8_t value);
 
-        template<typename TYPEDEF>
-        void ADD_TO_MAP_3D(uint8_t MAP_ID,TYPEDEF bearing, TYPEDEF value,TYPEDEF ALTITUDE);
+        //template<typename uint8_t>
+        void ADD_TO_MAP_3D(uint8_t MAP_ID,uint8_t bearing, uint8_t value,uint8_t ALTITUDE);
 
-        template<typename TYPEDEF>
+        //template<typename uint8_t>
         //Returns file ID <char type>
-        char* OUTPUT_TO_JSON(TYPEDEF TOKEN);
+        char* OUTPUT_TO_JSON(uint8_t TOKEN);
 };
 
 #endif
