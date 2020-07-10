@@ -8,6 +8,8 @@ uint8_t ID_ARRAYINDEX_CORRELATION_DATA[5][2];
 //It is incremented every time a new map ID is called 
 uint8_t IACD_count;
 
+uint8_t subarrayCount;
+
 //MAP is the main data structure which holds all maps that are created 
 //It is three dimensional consisting of up to 64 different map structures which can be stored
 //at runtime
@@ -24,7 +26,7 @@ uint8_t ADD_NEW_MAP_TO_CORRELATION_ARRAY(uint8_t ID,uint8_t NUMBER_OF_MAPS){
     ID_ARRAYINDEX_CORRELATION_DATA[IACD_count][0] = ID;
     ID_ARRAYINDEX_CORRELATION_DATA[IACD_count][1] = NUMBER_OF_MAPS;
     IACD_count++;
-    return;
+    return 1;
 }
 
 //Function returns the next available index position inside IACD data structure
@@ -50,7 +52,16 @@ uint8_t MAP2D_::INIT_MAP(uint8_t TOKEN){
 //Determine last index used to avoid wrong memory overwrite. Add bearing to container at 
 //last index + 1 and add value to container as well
 uint8_t MAP2D_::ADD_NEW_BEARING(uint8_t ID,uint8_t bearing){
-
+    //Call IACD function to retrieve sub map position which corresponds with the ID
+    uint8_t mapLocation = GET_ID_INDEX_CORRELATION(ID);
+    //Placeholder for (value) in newly allocated sub array
+    uint8_t Pvalue = 0;
+    //Init Bearing
+    MAP[mapLocation][subarrayCount][0] = bearing;
+    //Init placeholder value
+    MAP[mapLocation][subarrayCount][1] = Pvalue;
+    subarrayCount++;
+    return 1;
 }
 
 //Use ID to determine map location. -> If bearing not in map then add to map -> else
@@ -129,7 +140,6 @@ uint8_t MAP2D_::GET_ID_INDEX_CORRELATION(uint8_t ID){
  int main(){
      MAP2D_ *obj1 = new MAP2D_;
      uint8_t ID = obj1 ->INIT_MAP(1);
-    obj1 ->SEARCH_FOR_BEARING(ID,ID);
      //obj1 -> UPDATE_2D(ID,60,5);
      obj1 -> DEBUG_PRINT();
      return 0;
