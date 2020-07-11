@@ -80,6 +80,7 @@ uint8_t MAP2D_::UPDATE_2D(uint8_t  ID,uint8_t bearing, uint8_t  value){
     //DEBUG_PRINT();
 }
 
+//Function to add incoming data to map using ID to determine container where data will be stored
 uint8_t  MAP2D_::ADD_ON_TO_MAP(uint8_t ID,uint8_t index,uint8_t  value){
     //Call IACD function to retrieve sub map position which corresponds with the ID
     uint8_t mapLocationIndex = GET_ID_INDEX_CORRELATION(ID);
@@ -137,10 +138,3 @@ uint8_t MAP2D_::GET_ID_INDEX_CORRELATION(uint8_t ID){
      //}
  }
 
- int main(){
-     MAP2D_ *obj1 = new MAP2D_;
-     uint8_t ID = obj1 ->INIT_MAP(1);
-     //obj1 -> UPDATE_2D(ID,60,5);
-     obj1 -> DEBUG_PRINT();
-     return 0;
- }
