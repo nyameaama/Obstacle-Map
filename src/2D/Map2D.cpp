@@ -10,11 +10,6 @@ uint8_t IACD_count;
 
 uint8_t subarrayCount;
 
-//MAP is the main data structure which holds all maps that are created 
-//It is three dimensional consisting of up to 64 different map structures which can be stored
-//at runtime
-double MAP[1][64][2];
-
 //mapSize holds maximum sub arrays which can be allocated
 uint8_t mapSize = 64;
 //Container to hold number of maps which can be allocated

@@ -10,6 +10,11 @@
 
 #define INIT (uint8_t) 1
 
+//MAP is the main data structure which holds all maps that are created 
+//It is three dimensional consisting of up to 64 different map structures which can be stored
+//at runtime
+double MAP[1][64][2];
+
 class MAP2D_ {
     private:
         //Structure to determine map location for individual IDs
@@ -33,13 +38,13 @@ class MAP2D_ {
         //Function to linear search Map for corresponding bearing and return index if found
         uint8_t SEARCH_FOR_BEARING(uint8_t ID,uint8_t bearing);
 
+        uint8_t ATTACH_TO_JSON();
+
+    public:
         //Function gets position of corresponding sub map in the three dimensional
         //data structure using the map ID 
         uint8_t GET_ID_INDEX_CORRELATION(uint8_t ID);
 
-        uint8_t ATTACH_TO_JSON();
-
-    public:
         //Function adds new ID and new map location to ID correlation array
         uint8_t INIT_MAP(uint8_t TOKEN);
 
