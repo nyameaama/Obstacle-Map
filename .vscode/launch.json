@@ -8,8 +8,7 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/hello",
-            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/Tests/main/build",
             "internalConsoleOptions": "openOnSessionStart",
             "logging": {
                 "moduleLoad": false,
