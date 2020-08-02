@@ -1,6 +1,6 @@
 #include"MAP2D.h"
 
-//IACD is the strucutre which holds references to the each map and their index in the 
+//IACD is the structure which holds references to the each map and their index in the 
 //three dimensional MAP structure
 uint8_t ID_ARRAYINDEX_CORRELATION_DATA[5][2];
 
@@ -110,8 +110,8 @@ uint8_t  MAP2D_::SEARCH_FOR_BEARING(uint8_t ID,uint8_t bearing){
 uint8_t MAP2D_::GET_ID_INDEX_CORRELATION(uint8_t ID){
     //Variable holding return index
     signed int finalIndex = -1;
-    // //Iterate through each sub array in IACD to find the sub map location.
-     //If location is found, return 
+    //Iterate through each sub array in IACD to find the sub map location.
+    //If location is found, return 
     for(size_t i = 0; i < IACD_count;++i){
         if(ID_ARRAYINDEX_CORRELATION_DATA[i][0] != ID){
             continue;
