@@ -38,3 +38,5 @@ This library is
 * 3D mapping support by augmenting DOF readings with distance/bearing values
 
 * Less memory footprint with greater microcontroller support
+
+## This repository is no longer updated. [Updated project files are here](https://github.com/AUAC-Technologies/AUAC-Core-OBS-mapper)
